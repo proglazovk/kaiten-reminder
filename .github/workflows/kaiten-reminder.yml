@@ -24,4 +24,4 @@ jobs:
       - name: Run Kaiten reminder
         env:
           KAITEN_TOKEN: ${{ secrets.KAITEN_TOKEN }}
-        run: python worklog_reminder_bot.py --config worklog_reminder.config.json --only kaiten
+        run: python worklog_reminder_bot.py --config worklog_reminder.github.config.json --only kaiten

@@ -1,0 +1,31 @@
+{
+  "notification": {
+    "comment_template": "Напоминание за {today}: затрекай, пожалуйста, время по задаче и коротко отпишись по результату работы за сегодня."
+  },
+  "kaiten": {
+    "base_url": "https://hantico.kaiten.ru",
+    "api_prefix": "/api/latest",
+    "transport": "requests",
+    "token": "${KAITEN_TOKEN}",
+    "auth_header_name": "Authorization",
+    "auth_header_value_template": "Bearer {token}",
+    "board_ids": [
+      1240959
+    ],
+    "my_user_id": "@k_glazov",
+    "my_identity_variants": [
+      "@k_glazov",
+      "k_glazov",
+      "Кирилл Глазов",
+      "Глазов Кирилл"
+    ],
+    "work_column_titles": [
+      "В работе"
+    ],
+    "work_column_ids": [
+      5819140
+    ],
+    "comment_endpoint_template": "/cards/{card_id}/comments",
+    "comment_text_field": "text"
+  }
+}
