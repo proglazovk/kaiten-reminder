@@ -1,0 +1,95 @@
+{
+  "notification": {
+    "comment_template": "Напоминание за {today}: пожалуйста, затрекайте время по задаче и коротко отпишитесь по результату работы за сегодня."
+  },
+  "kaiten": {
+    "base_url": "https://your-company.kaiten.ru",
+    "api_prefix": "/api/latest",
+    "token": "${KAITEN_TOKEN}",
+    "auth_header_name": "Authorization",
+    "auth_header_value_template": "Bearer {token}",
+    "board_ids": [
+      12345
+    ],
+    "my_user_id": 100500,
+    "work_column_titles": [
+      "В работе"
+    ],
+    "work_column_ids": [],
+    "comment_endpoint_template": "/cards/{card_id}/comments",
+    "comment_text_field": "text"
+  },
+  "myteam_web": {
+    "browser_binary": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "user_data_dir": "C:\\Users\\79201\\AppData\\Local\\Microsoft\\Edge\\User Data",
+    "profile_directory": "Default",
+    "headless": false,
+    "wait_seconds": 20,
+    "boards": [
+      {
+        "name": "Team tasks",
+        "url": "https://hantico.ismyteam.ru/tasks/team-tasks/9?page=1&searchCode=search"
+      }
+    ],
+    "work_column_titles": [
+      "В работе"
+    ],
+    "my_identity_variants": [
+      "Ваше Имя Фамилия",
+      "Ваш логин"
+    ],
+    "browser_args": [
+      "--disable-notifications"
+    ],
+    "selectors": {
+      "board_ready": {
+        "by": "css_selector",
+        "value": "[data-testid='tasks-board'], .task-board, .board-columns"
+      },
+      "task_card": {
+        "by": "css_selector",
+        "value": "[data-testid='task-card'], .task-card, .TasksListItem, .task-preview"
+      },
+      "column_name": {
+        "by": "css_selector",
+        "value": "[data-testid='column-name'], .column-title, .status"
+      },
+      "responsible": {
+        "by": "css_selector",
+        "value": "[data-testid='responsible'], .responsible, .assignee"
+      },
+      "participants": {
+        "by": "css_selector",
+        "value": "[data-testid='participants'], .participants, .members"
+      },
+      "watchers": {
+        "by": "css_selector",
+        "value": "[data-testid='watchers'], .watchers, .observers"
+      },
+      "open_card_click_target": {
+        "by": "css_selector",
+        "value": "a, button, .title"
+      },
+      "comment_input": {
+        "by": "css_selector",
+        "value": "[contenteditable='true'], textarea"
+      },
+      "comment_submit": {
+        "by": "css_selector",
+        "value": "button[type='submit'], .send-btn, .comment-submit"
+      },
+      "task_title": {
+        "by": "css_selector",
+        "value": "[data-testid='task-title'], .task-title, h1, h2"
+      },
+      "task_id": {
+        "by": "css_selector",
+        "value": "[data-testid='task-id'], .task-id, .issue-key"
+      },
+      "close_card": {
+        "by": "css_selector",
+        "value": "[aria-label='Close'], .modal-close, .drawer-close"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kaiten": {
+    "base_url": "https://your-company.kaiten.ru",
+    "api_prefix": "/api/latest",
+    "token": "${KAITEN_TOKEN}",
+    "auth_header_name": "Authorization",
+    "auth_header_value_template": "Bearer {token}",
+    "board_ids": [
+      12345
+    ],
+    "my_user_id": 100500,
+    "work_column_titles": [
+      "В работе"
+    ],
+    "work_column_ids": [],
+    "comment_endpoint_template": "/cards/{card_id}/comments",
+    "comment_text_field": "text"
+  },
+  "notification": {
+    "comment_template": "Напоминание за {today}: если задача сегодня была в колонке \"{column_name}\", пожалуйста, затрекайте время и коротко отпишитесь по результату работы."
+  },
+  "myteam": {
+    "enabled": true,
+    "base_url": "https://myteam.mail.ru/bot/v1",
+    "token": "${MYTEAM_BOT_TOKEN}",
+    "chat_id": "chat123456",
+    "send_text_endpoint": "/messages/sendText",
+    "token_param_name": "token",
+    "chat_id_param_name": "chatId",
+    "text_param_name": "text",
+    "summary_template": "Напоминания за {today}\nДоска: {board_name}\nКоличество: {count}\n{cards_block}"
+  }
+}
